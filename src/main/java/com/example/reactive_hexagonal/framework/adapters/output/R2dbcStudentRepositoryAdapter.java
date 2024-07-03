@@ -21,6 +21,6 @@ public class R2dbcStudentRepositoryAdapter implements StudentRepositoryOutput {
 
     @Override
     public Flux<Student> findAll() {
-        return null;
+        return studentRepository.findAll().map(StudentEntity::toStudent);
     }
 }
