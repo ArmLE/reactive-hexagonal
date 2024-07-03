@@ -27,4 +27,7 @@ public class StudentEntity {
     public static StudentEntity toStudentEntity(Student student) {
         return modelMapper.map(student, StudentEntity.class);
     }
+    public static Student toStudent(StudentEntity studentEntity) {
+        return modelMapper.map(studentEntity, Student.class);
+    }
 }
